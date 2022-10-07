@@ -6,7 +6,7 @@ window = tkinter.Tk()
 canvas = tkinter.Canvas(window, width=800, height=100)
 canvas.pack()
 x = 400
-our_time = canvas.create_text(100, 150, text='', font=('Arial', 50), fill='DarkMagenta')
+our_time = canvas.create_text(100, 150, text='', font=('Arial', 20), fill='DarkMagenta')
 delta = 2
 while True:
     x = x + delta
@@ -15,7 +15,7 @@ while True:
     text = nowtime.strftime("%c")
     canvas.itemconfig(our_time, text=text)
     canvas.update()
-    if x < 360 or x > 440:
+    if x < 150 or x > 650:
         delta = -delta
     time.sleep(0.01)
 # noinspection PyUnreachableCode
